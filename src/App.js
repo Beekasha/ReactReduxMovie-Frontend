@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
+import Navbar from './components/Navbar'
+
 class App extends React.Component {
   render() {
     return (
-      // <div className="App">
-      //   App
-      // </div>
-      <span className="fas fa-ticket-alt fa-5x"></span>
+      <div className="App">
+        <Navbar /> 
+      </div>
+      
     );
   }
 
