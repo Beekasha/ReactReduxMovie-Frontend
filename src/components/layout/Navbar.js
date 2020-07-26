@@ -4,7 +4,6 @@ require('dotenv/config')
 
 
 function Navbar() {
-    console.log(process.env.API_KEY)
     return (
         <div>
           <nav className="navbar navbar-light bg-dark mb-5">
