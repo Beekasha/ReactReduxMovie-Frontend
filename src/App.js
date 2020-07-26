@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {Provider} from 'react-redux';
 
+//Hash router to prevent github upload issues
+import {HashRouter as Router} from 'react-router-dom';
+
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer';
 
@@ -12,9 +15,11 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Navbar />
-        <Landing />
-        <Footer /> 
+        <Router>
+          <Navbar />
+          <Landing />
+          <Footer /> 
+        </Router>
       </Provider>
       
     );
