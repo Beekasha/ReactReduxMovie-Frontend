@@ -3,10 +3,16 @@ import React, { Component } from 'react';
 //recieving key and movie
 class MovieCard extends Component {
 
-    // will return a "not available" picture if one is not available
+    // will return a "not available" image if a is not available
     handlePosterImg = (src) => {
         const link = src.slice(-4) === 'null' ? 'http://jbdev.nextmp.net/assets/images/posters/movie-poster-missing-2.jpg?v=1' : src
         return link
+    }
+
+    handleMovieYear = (release_date) => {
+        const year = release_date.slice(0,4)
+        const parsed_year = year.length === 4 ? year : 'N/A'
+        return parsed_year
     }
 
 
@@ -23,7 +29,7 @@ class MovieCard extends Component {
 
                 <h5 className="text-light card-title">
                     {/* release_date is slicing to pull out ONLY the year */}
-                    {movie.title} ({movie.release_date.slice(0, 4)})
+                    {movie.title} ({this.handleMovieYear(movie.release_date)})
                 </h5>
                 <a className="btn btn-primary" to={'/movie/' + "IMDB ID"} />
                     Movie Details
