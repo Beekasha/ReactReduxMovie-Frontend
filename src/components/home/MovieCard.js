@@ -31,9 +31,10 @@ class MovieCard extends Component {
                     {/* release_date is slicing to pull out ONLY the year */}
                     {movie.title} ({this.handleMovieYear(movie.release_date)})
                 </h5>
-                <a className="btn btn-primary" to={'/movie/' + movie.id} />
+                <a className="btn btn-primary" href="#">
                     Movie Details
                     <i className="fas fa-chevron-right" />
+                </a>
             </div>
         </div>
         );
