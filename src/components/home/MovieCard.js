@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 //recieving key and movie
 class MovieCard extends Component {
-    // findImg = (imgUrl) => {
-    //     if (imgUrl === null) {
-    //         return {src='http://jbdev.nextmp.net/assets/images/posters/movie-poster-missing-2.jpg?v=1'}
-    //     }
-    // }
+
+    // will return a "not available" picture if one is not available
+    handlePosterImg = (src) => {
+        const link = src.slice(-4) === 'null' ? 'http://jbdev.nextmp.net/assets/images/posters/movie-poster-missing-2.jpg?v=1' : src
+        return link
+    }
 
 
     render() {
@@ -17,8 +18,7 @@ class MovieCard extends Component {
             <div className="card card-body bg-dark text-center h-100">
                 <img 
                     className="w-200 mb-2" 
-                    src={`http://image.tmdb.org/t/p/w200${movie.poster_path}`} 
-                
+                    src={this.handlePosterImg(`http://image.tmdb.org/t/p/w200${movie.poster_path}`)}                
                     alt="Movie Cover" />
 
                 <h5 className="text-light card-title">
