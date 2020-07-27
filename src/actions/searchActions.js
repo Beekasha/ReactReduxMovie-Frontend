@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE} from './types';
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING} from './types';
 import axios from 'axios'
 
 // dispatch is coming from thunk
@@ -27,4 +27,10 @@ export  const fetchMovie = id => dispatch => {
     }))
     
     .catch(err => console.log(err))
+}
+
+export const setLoading = () => {
+    return{
+        type: LOADING
+    }
 }
