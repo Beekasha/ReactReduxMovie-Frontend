@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
+import { Button } from 'react-bootstrap';
 
 import {fetchMovie, setLoading} from '../../actions/searchActions'
 import LoadingSpinner from '../layout/LoadingSpinner';
@@ -13,6 +14,11 @@ export class Movie extends Component {
         this.props.fetchMovie(this.props.match.params.id)
         this.props.setLoading();
     }
+
+    testingComponents = () => {
+        console.log("button is working")
+    }
+
     render() {
         const {loading, movie} = this.props;
 
@@ -26,6 +32,9 @@ export class Movie extends Component {
                     </div>
                     <div className="col-md-8">
                         <h2 className="mb-4">{movie.Title}</h2>
+                        {/* <button onSubmit={this.testingComponents()} type="button" className="btn btn-primary btn-sm">Add To Watchlist</button> */}
+                        <Button variant="primary" size="lg" block> Block level button </Button>
+                        <br></br>
                         <ul className="list-group">
                             <li className="list-group-item">
                                 <strong>Genre:</strong> {movie.Genre}
@@ -77,7 +86,7 @@ export class Movie extends Component {
         )
 
         let content = loading ? <LoadingSpinner /> : movieInfo;
-
+            console.log(movie)
         return (
             <div>{content}</div>
         );
