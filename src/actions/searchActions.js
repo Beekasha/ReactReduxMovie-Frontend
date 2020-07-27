@@ -49,7 +49,6 @@ export const saveMovieToWatchlist = movie => dispatch => {
         .then(dispatch({
             type: SAVE_TO_WATCHLIST
         }))
-        .then(res => res.json())
         .then(data => {
             console.log('Success', data)
         })
