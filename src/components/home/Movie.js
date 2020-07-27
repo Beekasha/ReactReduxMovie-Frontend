@@ -30,7 +30,6 @@ export class Movie extends Component {
         parsed_movie.genre = movie.Genre
         parsed_movie.imdbRating = movie.imdbRating
         parsed_movie.imdbID = movie.imdbID
-        console.log(parsed_movie)
         return parsed_movie
 
     }
@@ -107,7 +106,6 @@ export class Movie extends Component {
         )
 
         let content = loading ? <LoadingSpinner /> : movieInfo;
-            console.log(movie)
         return (
             <div>{content}</div>
         );

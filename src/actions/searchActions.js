@@ -44,7 +44,6 @@ export const setLoading = () => {
 // }
 
 export const saveMovieToWatchlist = movie => dispatch => {
-        console.log(movie)
         axios.post('http://localhost:3000/movies', movie)
         .then(dispatch({
             type: SAVE_TO_WATCHLIST
