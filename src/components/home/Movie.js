@@ -33,7 +33,7 @@ export class Movie extends Component {
                     <div className="col-md-8">
                         <h2 className="mb-4">{movie.Title}</h2>
                         {/* <button onSubmit={this.testingComponents()} type="button" className="btn btn-primary btn-sm">Add To Watchlist</button> */}
-                        <Button variant="primary" size="lg" block> Block level button </Button>
+                        <Button  onClick={this.testingComponents} variant="primary" size="lg" block> Add to Watchlist </Button>
                         <br></br>
                         <ul className="list-group">
                             <li className="list-group-item">
