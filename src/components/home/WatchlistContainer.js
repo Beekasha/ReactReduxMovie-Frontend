@@ -11,10 +11,15 @@ class WatchlistContainer extends Component {
     }
 
     render() {
-        // console.log(this.props)
+        const {movies} = this.props
+
+        let content = movies.map(movie => <li>{movie.title}</li>)
         return (
             <div>
                 <h1>Hello from Watchlist</h1>
+                <ul>
+                    {content}
+                </ul>
             </div>
         );
     }
