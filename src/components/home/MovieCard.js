@@ -4,18 +4,6 @@ import {Link} from 'react-router-dom';
 //recieving key and movie
 class MovieCard extends Component {
 
-    // will return a "not available" image if a is not available
-    handlePosterImg = (src) => {
-        const link = src.slice(-4) === 'null' ? 'http://jbdev.nextmp.net/assets/images/posters/movie-poster-missing-2.jpg?v=1' : src
-        return link
-    }
-
-    handleMovieYear = (release_date) => {
-        const year = release_date.slice(0,4)
-        const parsed_year = year.length === 4 ? year : 'N/A'
-        return parsed_year
-    }
-
 
     render() {
         const movie = this.props.movie;
@@ -25,12 +13,12 @@ class MovieCard extends Component {
             <div className="card card-body bg-dark text-center h-100">
                 <img 
                     className="w-200 mb-2" 
-                    src={this.handlePosterImg(`http://image.tmdb.org/t/p/w200${movie.poster_path}`)}                
+                    src="postersrc"               
                     alt="Movie Cover" />
 
                 <h5 className="text-light card-title">
                     {/* release_date is slicing to pull out ONLY the year */}
-                    {movie.title} ({this.handleMovieYear(movie.release_date)})
+                    {movie.title} - movie year
                 </h5>
                 <Link className="btn btn-primary" to={'/movie/' + movie.id}>
                     Movie Details

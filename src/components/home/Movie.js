@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 import {fetchMovie, setLoading} from '../../actions/searchActions'
 import LoadingSpinner from '../layout/LoadingSpinner';
 
-import {handlePosterImg} from './MovieCard';
 
 export class Movie extends Component {
 
