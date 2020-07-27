@@ -17,11 +17,17 @@ class WatchlistContainer extends Component {
 
         let content = 
             movies.map(movie => 
+            <React.Fragment>
             <Link to={'/movie/' + movie.imdbID } key={movie.id}>
                 <li >
                     {movie.title}
                 </li>
-            </Link>)
+            </Link>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </React.Fragment>
+            )
 
         return (
             <div>
