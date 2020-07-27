@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 
 import {fetchMoviesFromWatchlist} from '../../actions/searchActions';
 
+import {Link} from 'react-router-dom'
+
 class WatchlistContainer extends Component {
 
     componentDidMount() {
@@ -13,7 +15,14 @@ class WatchlistContainer extends Component {
     render() {
         const {movies} = this.props
 
-        let content = movies.map(movie => <li>{movie.title}</li>)
+        let content = 
+            movies.map(movie => 
+            <Link to={'/movie/' + movie.imdbID }>
+                <li>
+                    {movie.title}
+                </li>
+            </Link>)
+
         return (
             <div>
                 <h1>Hello from Watchlist</h1>
