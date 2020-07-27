@@ -11,6 +11,7 @@ import Landing from './components/home/Landing';
 import Movie from './components/home/Movie'
 
 import store from './store';
+import WatchlistContainer from './components/home/WatchlistContainer';
 
 class App extends React.Component {
   render() {
@@ -22,7 +23,7 @@ class App extends React.Component {
             <Navbar />
             <Route exact path="/" component={Landing}/>
             <Route exact path="/movie/:id" component={Movie}/>
-
+            <Route exact path="/watchlist" component={WatchlistContainer} />
             <Footer /> 
           </div>
         </Router>
