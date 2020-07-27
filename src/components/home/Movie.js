@@ -17,6 +17,7 @@ export class Movie extends Component {
     render() {
         const {loading, movie} = this.props;
 
+
         let movieInfo = (
         <React.Fragment>
             <div className="container">
@@ -28,10 +29,11 @@ export class Movie extends Component {
                         <h2 className="mb-4">{movie.title}</h2>
                         <ul className="list-group">
                             <li className="list-group-item">
-                                <strong>Genre:</strong> "moviegenre"
+                                <strong>Genre:</strong> Genres
                             </li>
+                          
                             <li className="list-group-item">
-                                <strong>Released:</strong> "moviereleasedate"
+                                <strong>Released:</strong> {movie.release_date}
                             </li>
                             <li className="list-group-item">
                                 <strong>Rated:</strong> "movierating"
@@ -46,7 +48,7 @@ export class Movie extends Component {
                                 <strong>Writer:</strong> "movieWriter"
                             </li>
                             <li className="list-group-item">
-                                <strong>Actors:</strong> "movieActors"
+                                <strong>Runtime:</strong> {movie.runtime} minutes
                             </li>
                         </ul>
                     </div>
