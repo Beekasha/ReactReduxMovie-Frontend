@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom';
 import {fetchMovie, setLoading} from '../../actions/searchActions'
 import LoadingSpinner from '../layout/LoadingSpinner';
 
+import {handlePosterImg} from './MovieCard';
+
 export class Movie extends Component {
 
     componentDidMount() {
@@ -23,7 +25,7 @@ export class Movie extends Component {
                         <img src="{movie.Poster}" className="thumbnail" alt="Poster" />
                     </div>
                     <div className="col-md-8">
-                        <h2 className="mb-4">"movie title"</h2>
+                        <h2 className="mb-4">{movie.title}</h2>
                         <ul className="list-group">
                             <li className="list-group-item">
                                 <strong>Genre:</strong> "moviegenre"
@@ -53,7 +55,7 @@ export class Movie extends Component {
                     <div className="card card-body bg-dark my-5 text-light">
                         <div className="col-md-12">
                         <h3>About </h3>
-                        "moviePlot"
+                        {movie.overview}
                         <hr />
                         <a
                             href={'https://www.imdb.com/title/' + "movieTMDBid"}
