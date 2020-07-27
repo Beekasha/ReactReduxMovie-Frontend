@@ -44,9 +44,14 @@ export const setLoading = () => {
 // }
 
 export const saveMovieToWatchlist = movie => dispatch => {
-        axios.post('localhost:3000', {movie})
+        console.log(movie)
+        axios.post('http://localhost:3000/movies', movie)
         .then(dispatch({
             type: SAVE_TO_WATCHLIST
         }))
-        .catch(err => console.log(err))
+        .then(res => res.json())
+        .then(data => {
+            console.log('Success', data)
+        })
+        .catch(err => console.log('Error:', err))
 }

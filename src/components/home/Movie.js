@@ -15,10 +15,30 @@ export class Movie extends Component {
         this.props.setLoading();
     }
 
+    prepMovieForApi = movie => {
+        const parsed_movie = {}
+        parsed_movie.title = movie.Title
+        parsed_movie.year = movie.Year
+        parsed_movie.rated = movie.Rated
+        parsed_movie.released = movie.Released
+        parsed_movie.runtime = movie.Runtime
+        parsed_movie.director = movie.Director
+        parsed_movie.plot = movie.Plot
+        parsed_movie.poster = movie.Poster
+        parsed_movie.response = movie.Response
+        parsed_movie.actors = movie.Actors
+        parsed_movie.genre = movie.Genre
+        parsed_movie.imdbRating = movie.imdbRating
+        parsed_movie.imdbID = movie.imdbID
+        console.log(parsed_movie)
+        return parsed_movie
+
+    }
+
     handleAddToWatchlistClick = () => {
         //drop this in my DB
-        console.log(this.props.movie)
-        this.props.saveMovieToWatchlist(this.props.movie)
+        const parsed_movie = this.prepMovieForApi(this.props.movie)
+        this.props.saveMovieToWatchlist(parsed_movie)
     }
 
     render() {
