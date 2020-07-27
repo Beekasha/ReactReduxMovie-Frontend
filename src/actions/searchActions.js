@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, SAVE_TO_WATCHLIST, FETCH_MOVIES_FROM_WATCHLIST} from './types';
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, SAVE_TO_WATCHLIST, FETCH_MOVIES_FROM_WATCHLIST, DELETE_MOVIE_FROM_WATCHLIST} from './types';
 import axios from 'axios'
 
 // dispatch is coming from thunk
@@ -58,6 +58,18 @@ export const fetchMoviesFromWatchlist = () => dispatch => {
     axios.get(`http://localhost:3000/movies`)
     .then(response => dispatch({
         type: FETCH_MOVIES_FROM_WATCHLIST,
+        payload: response.data
+    }))
+    
+    .catch(err => console.log(err))
+}
+
+
+
+export const deleteMovieFromWatchlist = (id) => dispatch => {
+    axios.delete(`http://localhost:3000/movies/` + {id} )
+    .then(response => dispatch({
+        type: DELETE_MOVIE_FROM_WATCHLIST,
         payload: response.data
     }))
     

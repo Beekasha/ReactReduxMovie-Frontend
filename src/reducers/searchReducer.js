@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, FETCH_MOVIES_FROM_WATCHLIST} from '../actions/types';
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, FETCH_MOVIES_FROM_WATCHLIST, DELETE_MOVIE_FROM_WATCHLIST} from '../actions/types';
 
 const initialState = {
     text : '',
@@ -38,6 +38,12 @@ export default function(state = initialState, action) {
                 movies: action.payload,
                 loading: false
                 }
+        case DELETE_MOVIE_FROM_WATCHLIST:
+            return {
+                ...state,
+                movies: action.payload,
+                loading: false
+            }
         default:
             return state
     }
