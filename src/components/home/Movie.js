@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 
 
 import {fetchMovie, setLoading} from '../../actions/searchActions'
+import LoadingSpinner from '../layout/LoadingSpinner';
 
 export class Movie extends Component {
 
@@ -12,10 +13,10 @@ export class Movie extends Component {
         this.props.setLoading();
     }
     render() {
-        console.log("hey")
+        const {loading, movie} = this.props;
 
-        return (
-            <React.Fragment>
+        let movieInfo = (
+        <React.Fragment>
             <div className="container">
                 <div className="row">
                     <div className="col-md-4 card card-body">
@@ -69,7 +70,13 @@ export class Movie extends Component {
                     </div>
                 </div>
             </div>
-            </React.Fragment>
+        </React.Fragment>
+        )
+
+        let content = loading ? <LoadingSpinner /> : movieInfo;
+
+        return (
+            <div>{content}</div>
         );
     }
 }
