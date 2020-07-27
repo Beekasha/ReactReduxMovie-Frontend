@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING} from './types';
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, SAVE_TO_WATCHLIST} from './types';
 import axios from 'axios'
 
 // dispatch is coming from thunk
@@ -33,4 +33,20 @@ export const setLoading = () => {
     return{
         type: LOADING
     }
+}
+
+// export const saveMovieToWatchlist = movie => {
+//     axios.post('localhost:3000', {movie})
+//     .then(response => dispatch({
+//         type: SAVE_TO_WATCHLIST
+//     }))
+//     .catch(err => console.log(err))
+// }
+
+export const saveMovieToWatchlist = movie => dispatch => {
+        axios.post('localhost:3000', {movie})
+        .then(dispatch({
+            type: SAVE_TO_WATCHLIST
+        }))
+        .catch(err => console.log(err))
 }

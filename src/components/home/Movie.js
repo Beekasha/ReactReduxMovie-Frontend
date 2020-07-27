@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 import { Button } from 'react-bootstrap';
 
-import {fetchMovie, setLoading} from '../../actions/searchActions'
+import {fetchMovie, setLoading, saveMovieToWatchlist} from '../../actions/searchActions'
 import LoadingSpinner from '../layout/LoadingSpinner';
 
 
@@ -18,6 +18,7 @@ export class Movie extends Component {
     handleAddToWatchlistClick = () => {
         //drop this in my DB
         console.log(this.props.movie)
+        this.props.saveMovieToWatchlist(this.props.movie)
     }
 
     render() {
@@ -98,4 +99,4 @@ const mapStateToProps = state => ({
     movie: state.movies.movie
 })
 
-export default connect(mapStateToProps, {fetchMovie, setLoading})(Movie);
+export default connect(mapStateToProps, {fetchMovie, setLoading, saveMovieToWatchlist})(Movie);
