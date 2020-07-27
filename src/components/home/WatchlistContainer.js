@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 
 import {connect} from 'react-redux';
 
-import MovieCard from './MovieCard'
 import {fetchMoviesFromWatchlist} from '../../actions/searchActions';
 
 class WatchlistContainer extends Component {
 
     componentDidMount() {
-        const movies = this.props.fetchMoviesFromWatchlist();
-        console.log(movies)
+        this.props.fetchMoviesFromWatchlist();
     }
 
     render() {
