@@ -15,7 +15,7 @@ class MovieCard extends Component {
                 {movie.Title} ({movie.Year})
               </h5>
               <Link className="btn btn-primary" to={'/movie/' + movie.imdbID}>
-                Movie Details
+                Learn More
                 <i className="fas fa-chevron-right" />
               </Link>
             </div>

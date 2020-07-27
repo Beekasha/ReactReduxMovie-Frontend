@@ -22,32 +22,32 @@ export class Movie extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-4 card card-body">
-                        <img src="{movie.Poster}" className="thumbnail" alt="Poster" />
+                        <img src={movie.Poster} className="thumbnail" alt="Poster" />
                     </div>
                     <div className="col-md-8">
-                        <h2 className="mb-4">{movie.title}</h2>
+                        <h2 className="mb-4">{movie.Title}</h2>
                         <ul className="list-group">
                             <li className="list-group-item">
-                                <strong>Genre:</strong> Genres
+                                <strong>Genre:</strong> {movie.Genre}
                             </li>
                           
                             <li className="list-group-item">
-                                <strong>Released:</strong> {movie.release_date}
+                                <strong>Released:</strong> {movie.Released}
                             </li>
                             <li className="list-group-item">
-                                <strong>Rated:</strong> "movierating"
+                                <strong>Rated:</strong> {movie.Rated}
                             </li>
                             <li className="list-group-item">
-                                <strong>IMDB Rating:</strong> "movieimdbrating"
+                                <strong>IMDB Rating:</strong> {movie.imdbRating}/10
                             </li>
                             <li className="list-group-item">
-                                <strong>Director:</strong> "movieDirector"
+                                <strong>Director:</strong> {movie.Director}
                             </li>
                             <li className="list-group-item">
-                                <strong>Writer:</strong> "movieWriter"
+                                <strong>Writer:</strong> {movie.Writer}
                             </li>
                             <li className="list-group-item">
-                                <strong>Runtime:</strong> {movie.runtime} minutes
+                                <strong>Runtime:</strong> {movie.Runtime}
                             </li>
                         </ul>
                     </div>
@@ -56,10 +56,10 @@ export class Movie extends Component {
                     <div className="card card-body bg-dark my-5 text-light">
                         <div className="col-md-12">
                         <h3>About </h3>
-                        {movie.overview}
+                        {movie.Plot}
                         <hr />
                         <a
-                            href={'https://www.imdb.com/title/' + "movieTMDBid"}
+                            href={`https://www.imdb.com/title/${movie.imdbID}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-primary"

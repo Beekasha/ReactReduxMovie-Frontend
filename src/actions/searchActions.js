@@ -20,7 +20,7 @@ export const fetchMovies = text => dispatch => {
 }
 
 export  const fetchMovie = id => dispatch => {
-    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=337f338ffc9eae3e5378cc87107d0a13&language=en-US`)
+    axios.get(`http://www.omdbapi.com/?apikey=9fa6058b&i=${id}`)
     .then(response => dispatch({
         type: FETCH_MOVIE,
         payload: response.data
