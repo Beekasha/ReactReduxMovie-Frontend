@@ -17,15 +17,15 @@ class WatchlistContainer extends Component {
 
         let content = 
             movies.map(movie => 
-            <Link to={'/movie/' + movie.imdbID }>
-                <li>
+            <Link to={'/movie/' + movie.imdbID } key={movie.id}>
+                <li >
                     {movie.title}
                 </li>
             </Link>)
 
         return (
             <div>
-                <h1>Hello from Watchlist</h1>
+                <h1>Your Watchlist...</h1>
                 <ul>
                     {content}
                 </ul>
