@@ -22,7 +22,7 @@ class WatchlistContainer extends Component {
 
 const mapStateToProps = state => ({
     // movies: state.movies.movies
-    movies: fetchMoviesFromWatchlist()
+    movies: state.movies.movies
 })
 
 export default connect(mapStateToProps, {fetchMoviesFromWatchlist} )(WatchlistContainer);
