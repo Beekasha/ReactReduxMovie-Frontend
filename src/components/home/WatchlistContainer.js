@@ -16,6 +16,7 @@ class WatchlistContainer extends Component {
     handleDeleteMovie = (id) => {
         // this.props.deleteMovieFromWatchlist(id)
         console.log('id:', id)
+        this.props.deleteMovieFromWatchlist(id);
     }
 
     render() {

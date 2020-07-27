@@ -66,8 +66,8 @@ export const fetchMoviesFromWatchlist = () => dispatch => {
 
 
 
-export const deleteMovieFromWatchlist = (id) => dispatch => {
-    axios.delete(`http://localhost:3000/movies/` + {id} )
+export const deleteMovieFromWatchlist = id => dispatch => {
+    axios.delete(`http://localhost:3000/movies/${id}`)
     .then(response => dispatch({
         type: DELETE_MOVIE_FROM_WATCHLIST,
         payload: response.data
