@@ -72,6 +72,6 @@ export const deleteMovieFromWatchlist = id => dispatch => {
         type: DELETE_MOVIE_FROM_WATCHLIST,
         payload: response.data
     }))
-    
     .catch(err => console.log(err))
 }
+
