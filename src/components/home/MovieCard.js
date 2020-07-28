@@ -15,7 +15,6 @@ class MovieCard extends Component {
         return (
           <div className="col-md-3 mb-5">
             <div className="card card-body bg-dark text-center h-100">
-              {/* Poster Image if N/A */}
               <img className="w-100 mb-2" src={moviePosterImg} alt="Movie Cover" />
               <h5 className="text-light card-title">
                 {movie.Title} ({movie.Year})

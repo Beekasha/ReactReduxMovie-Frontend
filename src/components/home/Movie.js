@@ -93,7 +93,7 @@ export class Movie extends Component {
                             rel="noopener noreferrer"
                             className="btn btn-primary"
                         >
-                            View on TMDB
+                            View on iMDB
                         </a>
                         <Link to="/" className="btn btn-default text-light">
                             Go Back To Search
