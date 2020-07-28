@@ -43,13 +43,15 @@ export class Movie extends Component {
     render() {
         const {loading, movie} = this.props;
 
+        let moviePosterImg = ''
+        moviePosterImg = movie.Poster === "N/A" ? 'https://cdn.bestmoviehd.net/share/images/no-cover.png' : movie.Poster
 
         let movieInfo = (
         <React.Fragment>
             <div className="container">
                 <div className="row">
                     <div className="col-md-4 card card-body">
-                        <img src={movie.Poster} className="thumbnail" alt="Poster" />
+                        <img src={moviePosterImg} className="thumbnail" alt="Poster" />
                     </div>
                     <div className="col-md-8">
                         <h2 className="mb-4">{movie.Title}</h2>
