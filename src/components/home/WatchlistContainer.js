@@ -5,8 +5,6 @@ import {connect} from 'react-redux';
 import {fetchMoviesFromWatchlist, deleteMovieFromWatchlist} from '../../actions/searchActions';
 
 
-import {Link} from 'react-router-dom'
-
 import WatchlistMovieCard from './WatchlistMovieCard';
 
 
@@ -23,24 +21,6 @@ class WatchlistContainer extends Component {
         this.props.deleteMovieFromWatchlist(id);
 
     }
-
-    // parseMovieForMovieCards = movie => {
-    //     let parsedMovie = {};
-    //     parsedMovie.Title = movie.title
-    //     parsedMovie.Year = movie.year
-    //     parsedMovie.Rated = movie.rated
-    //     parsedMovie.Released = movie.released
-    //     parsedMovie.Runtime = movie.runtime
-    //     parsedMovie.Director = movie.director
-    //     parsedMovie.Plot = movie.plot
-    //     parsedMovie.Poster = movie.poster
-    //     parsedMovie.Response = movie.response
-    //     parsedMovie.Actors = movie.actors
-    //     parsedMovie.Genre = movie.genre
-    //     parsedMovie.imdbRating = movie.imdbRating
-    //     parsedMovie.imdbID = movie.imdbID
-    //     return parsedMovie;
-    // }
 
     render() {
         const {movies} = this.props;
@@ -65,7 +45,6 @@ class WatchlistContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-    // movies: state.movies.movies
     movies: state.movies.movies
 })
 

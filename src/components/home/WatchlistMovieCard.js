@@ -36,7 +36,6 @@ class WatchlistMovieCard extends Component {
 }
 
 const mapStateToProps = state => ({
-    // movies: state.movies.movies
     movies: state.movies.movies
 })
 

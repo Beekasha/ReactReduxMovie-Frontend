@@ -17,7 +17,6 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        {/* does router have to wrap it's children in a div? */}
         <Router>
           <div>
             <Navbar />

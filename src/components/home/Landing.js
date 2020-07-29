@@ -17,7 +17,6 @@ class Landing extends Component {
     }
 }
 
-//pass loading as a prop into our component
 const mapStateToProps = state => ({
     loading: state.movies.loading
 })

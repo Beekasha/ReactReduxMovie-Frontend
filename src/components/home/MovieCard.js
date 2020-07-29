@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
-//recieving key and movie
 class MovieCard extends Component {
 
 
