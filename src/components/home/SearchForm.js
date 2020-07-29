@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 import {connect} from 'react-redux';
-
 import {searchMovie, fetchMovies, setLoading} from '../../actions/searchActions';
-
-
-
 
 
 class SearchForm extends Component {

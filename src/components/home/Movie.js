@@ -59,9 +59,11 @@ export class Movie extends Component {
                         <br></br>
                         <ul className="list-group">
                             <li className="list-group-item">
-                                <strong>Genre:</strong> {movie.Genre}
+                                <strong>Director:</strong> {movie.Director}
                             </li>
-                          
+                            <li className="list-group-item">
+                                <strong>Writer:</strong> {movie.Writer}
+                            </li>
                             <li className="list-group-item">
                                 <strong>Released:</strong> {movie.Released}
                             </li>
@@ -69,17 +71,15 @@ export class Movie extends Component {
                                 <strong>Rated:</strong> {movie.Rated}
                             </li>
                             <li className="list-group-item">
-                                <strong>IMDB Rating:</strong> {movie.imdbRating}/10
-                            </li>
-                            <li className="list-group-item">
-                                <strong>Director:</strong> {movie.Director}
-                            </li>
-                            <li className="list-group-item">
-                                <strong>Writer:</strong> {movie.Writer}
-                            </li>
-                            <li className="list-group-item">
                                 <strong>Runtime:</strong> {movie.Runtime}
                             </li>
+                            <li className="list-group-item">
+                                <strong>Genre:</strong> {movie.Genre}
+                            </li>
+                            <li className="list-group-item">
+                                <strong>IMDB Rating:</strong> {movie.imdbRating}/10
+                            </li>
+                            
                         </ul>
                     </div>
                     </div>
