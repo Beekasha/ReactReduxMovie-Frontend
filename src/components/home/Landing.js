@@ -5,7 +5,6 @@ import LoadingSpinner from '../layout/LoadingSpinner'
 import MoviesContainer from './MoviesContainer'
 
 class Landing extends Component {
-//export class Landing extends Component {
     render() {
         const {loading} = this.props
         return (

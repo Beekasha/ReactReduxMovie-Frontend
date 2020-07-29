@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom';
 import {deleteMovieFromWatchlist} from '../../actions/searchActions';
 import {connect} from 'react-redux';
 
-
-//recieving key and movie
 class WatchlistMovieCard extends Component {
 
 

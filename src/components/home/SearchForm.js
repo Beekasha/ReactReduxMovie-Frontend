@@ -6,6 +6,8 @@ import {searchMovie, fetchMovies, setLoading} from '../../actions/searchActions'
 
 
 
+
+
 class SearchForm extends Component {
 
     onChange = event => {
@@ -16,6 +18,10 @@ class SearchForm extends Component {
         event.preventDefault();
         this.props.fetchMovies(this.props.text);
         this.props.setLoading();
+    }
+
+    redirectToWatchlist = event => {
+        window.location.href='/#/watchlist'
     }
 
 
@@ -40,6 +46,9 @@ class SearchForm extends Component {
                             Search
                         </button>
                     </form>
+                    <button onClick={this.redirectToWatchlist} className="btn btn-secondary btn-bg mt-3">
+                            View Your Watchlist
+                    </button>
                 </div>
           </div>
         );
