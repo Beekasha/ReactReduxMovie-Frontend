@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-
 import {connect} from 'react-redux';
 
 import {fetchMoviesFromWatchlist, deleteMovieFromWatchlist} from '../../actions/searchActions';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a7b96bf9ae3be24d00ecc889263e438f46248f40
 import WatchlistMovieCard from './WatchlistMovieCard';
 
 
