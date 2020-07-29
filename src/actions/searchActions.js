@@ -72,6 +72,7 @@ export const deleteMovieFromWatchlist = id => dispatch => {
         type: DELETE_MOVIE_FROM_WATCHLIST,
         payload: response.data
     }))
+    .then(window.location.href = '/')
     .catch(err => console.log(err))
 }
 

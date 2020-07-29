@@ -6,6 +6,8 @@ import {fetchMoviesFromWatchlist, deleteMovieFromWatchlist} from '../../actions/
 
 
 import {Link} from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
+
 
 class WatchlistContainer extends Component {
 
@@ -17,6 +19,7 @@ class WatchlistContainer extends Component {
         // this.props.deleteMovieFromWatchlist(id)
         console.log('id:', id)
         this.props.deleteMovieFromWatchlist(id);
+
     }
 
     render() {
