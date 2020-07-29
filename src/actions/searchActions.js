@@ -35,14 +35,6 @@ export const setLoading = () => {
     }
 }
 
-// export const saveMovieToWatchlist = movie => {
-//     axios.post('localhost:3000', {movie})
-//     .then(response => dispatch({
-//         type: SAVE_TO_WATCHLIST
-//     }))
-//     .catch(err => console.log(err))
-// }
-
 export const saveMovieToWatchlist = movie => dispatch => {
         axios.post('http://localhost:3000/movies', movie)
         .then(dispatch({
@@ -66,8 +58,6 @@ export const fetchMoviesFromWatchlist = () => dispatch => {
     .catch(err => console.log(err))
 }
 
-
-
 export const deleteMovieFromWatchlist = id => dispatch => {
     axios.delete(`http://localhost:3000/movies/${id}`)
     .then(response => dispatch({
@@ -75,6 +65,7 @@ export const deleteMovieFromWatchlist = id => dispatch => {
         payload: response.data
     }))
     .then(window.location.href = '/')
+
     .catch(err => console.log(err))
 }
 
