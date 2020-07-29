@@ -6,7 +6,9 @@ import {fetchMoviesFromWatchlist, deleteMovieFromWatchlist} from '../../actions/
 
 
 import {Link} from 'react-router-dom'
-import { useHistory } from 'react-router-dom';
+
+import WatchlistMovieCard from './WatchlistMovieCard';
+
 
 
 class WatchlistContainer extends Component {
@@ -22,29 +24,41 @@ class WatchlistContainer extends Component {
 
     }
 
-    render() {
-        const {movies} = this.props
+    // parseMovieForMovieCards = movie => {
+    //     let parsedMovie = {};
+    //     parsedMovie.Title = movie.title
+    //     parsedMovie.Year = movie.year
+    //     parsedMovie.Rated = movie.rated
+    //     parsedMovie.Released = movie.released
+    //     parsedMovie.Runtime = movie.runtime
+    //     parsedMovie.Director = movie.director
+    //     parsedMovie.Plot = movie.plot
+    //     parsedMovie.Poster = movie.poster
+    //     parsedMovie.Response = movie.response
+    //     parsedMovie.Actors = movie.actors
+    //     parsedMovie.Genre = movie.genre
+    //     parsedMovie.imdbRating = movie.imdbRating
+    //     parsedMovie.imdbID = movie.imdbID
+    //     return parsedMovie;
+    // }
 
-        let content = 
-            movies.map(movie => 
-            <React.Fragment key={movie.id}>
-            <Link to={'/movie/' + movie.imdbID } >
-                <li >
-                    {movie.title}
-                </li>
-            </Link>
-            <button onClick={() => {this.handleDeleteMovie(movie.id)}} type="button" className="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </React.Fragment>
-            )
+    render() {
+        const {movies} = this.props;
+
+        
+        let content = ''
+
+        // let parsedMovies = movies.map(movie => parseMovieForMovieCards(movie))
+
+        content = movies[0] ? movies.map((movie, index) => <WatchlistMovieCard key={index} movie={movie}/>): null;
+        console.log(movies)
 
         return (
             <div>
                 <h1>Your Watchlist...</h1>
-                <ul>
+                <div className="row">
                     {content}
-                </ul>
+                </div>
             </div>
         );
     }
