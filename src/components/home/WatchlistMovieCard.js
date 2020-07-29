@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import {deleteMovieFromWatchlist} from '../../actions/searchActions';
+import {connect} from 'react-redux';
+
 
 //recieving key and movie
 class WatchlistMovieCard extends Component {
@@ -23,11 +26,19 @@ class WatchlistMovieCard extends Component {
                 Learn More
                 <i className="fas fa-chevron-right" />
               </Link>
+                <button onClick={() => {this.props.deleteMovieFromWatchlist(movie.id)}} type="button" className="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
           </div>
         );
-      }
+    }
 }
 
-export default WatchlistMovieCard;
+const mapStateToProps = state => ({
+    // movies: state.movies.movies
+    movies: state.movies.movies
+})
+
+export default connect(mapStateToProps, {deleteMovieFromWatchlist})(WatchlistMovieCard);
 
