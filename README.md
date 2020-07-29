@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Meant to work in conjunction with the ReactRedux-Backend:
+https://github.com/Beekasha/ReactReduxMovie-Backend
+
+Start a server on localhost:3000 by using `rails s`.
+After the backend server is running, continue on with the frontend.
+
 ## Available Scripts
 
 In the project directory, you can run:
