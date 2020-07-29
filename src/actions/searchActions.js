@@ -51,6 +51,8 @@ export const saveMovieToWatchlist = movie => dispatch => {
         .then(data => {
             console.log('Success', data)
         })
+        .then(window.location.href = '/')
+
         .catch(err => console.log('Error:', err))
 }
 
