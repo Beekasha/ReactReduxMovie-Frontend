@@ -2,8 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Meant to work in conjunction with the <a href="https://github.com/Beekasha/ReactReduxMovie-Backend">ReactRedux-Backend.</a>
 
-Start a server on localhost:3000 by using `rails s`.
+Start a server on localhost:3001 by using `npm start`.
 After the backend server is running, continue on with the frontend.
+
+![](demo.gif)
 
 ## Available Scripts
 
@@ -12,7 +14,7 @@ In the project directory, you can run:
 ### `yarn start`
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.

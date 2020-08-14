@@ -10,6 +10,10 @@ import LoadingSpinner from '../layout/LoadingSpinner';
 
 export class Movie extends Component {
 
+    state = {number: 1};
+    
+        
+
     componentDidMount() {
         this.props.fetchMovie(this.props.match.params.id)
         this.props.setLoading();
