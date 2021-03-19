@@ -8,6 +8,9 @@ Then, 'rails db:migrate' to set up your database.
 Start a server on by using `rails s`.
 After the backend server is running, continue on with the frontend.
 
+Install all dependencies with 'npm i'.
+Then, start frontend with 'npm s'.
+
 ![](demo.gif)
 
 ## Available Scripts
