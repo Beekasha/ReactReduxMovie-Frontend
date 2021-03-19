@@ -3,7 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Meant to work in conjunction with the <a href="https://github.com/Beekasha/ReactReduxMovie-Backend">ReactRedux-Backend.</a>
 
 Using the backend:
-Start a server on localhost:3001 by using `npm start`.
+First 'bundle' to install all dependencies.
+Then, 'rails db:migrate' to set up your database.
+Start a server on by using `rails s`.
 After the backend server is running, continue on with the frontend.
 
 ![](demo.gif)
