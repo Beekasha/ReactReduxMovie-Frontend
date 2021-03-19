@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Meant to work in conjunction with the <a href="https://github.com/Beekasha/ReactReduxMovie-Backend">ReactRedux-Backend.</a>
 
+Using the backend:
 Start a server on localhost:3001 by using `npm start`.
 After the backend server is running, continue on with the frontend.
 
